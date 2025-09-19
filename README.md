@@ -28,8 +28,6 @@ interface UserContextType {
 // Create the context with a default value of undefined
 export const UserContext = React.createContext<UserContextType | undefined>(undefined);
 
----
-
 ## How to Run
 
 ### 1. Clone the repository
@@ -38,10 +36,16 @@ export const UserContext = React.createContext<UserContextType | undefined>(unde
 git clone https://github.com/cmartinezBoada/ReactTypescript-Context-Example.git
 cd react-context-example
 
-cd react-context-example
+cd ReactTypescript-Context-Example
 
 ### 2. Install dependencies:
+
+```bash
+
 npm install
 
 ### 3. Start the development server:
+
+```bash
+
 npm run dev

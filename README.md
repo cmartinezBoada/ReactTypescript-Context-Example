@@ -37,3 +37,4 @@ npm install
 npm run dev  
 
 ### 4. Open your browser, after 5 seconds the message will update. 
+http://localhost:5174/

@@ -1,32 +1,26 @@
 # React TypeScript UserContext Example
 
-This is a small example demonstrating how to create and use a **React Context** in a **TypeScript** project. It includes proper typing, safe usage, and shows how to provide and consume global data in a React app.
+This is a small React + TypeScript project demonstrating how to use **React Context** to share state between components. The app dynamically updates context values and displays them safely in a child component.
 
 ---
 
 ## Features
 
-- **Type-safe context** using TypeScript interfaces
+- **Type-safe context** with TypeScript interfaces
 - Handles **undefined context values** safely
-- Demonstrates **Provider / useContext pattern**
-- Simple, easy-to-understand example
+- Demonstrates the **Provider / useContext pattern**
+- Dynamically updates context values after a timeout
 
 ---
 
-## Code Overview
+## How it Works
 
-### UserContext.tsx
+1. A **UserContext** is created to hold user information (`name` and `message`).
+2. The **App** component provides context values using `<UserContext.Provider>` and updates them dynamically after 5 seconds.
+3. A **Message** component consumes the context safely with `useContext` and displays the user name and message.
+4. Using context avoids prop drilling and keeps state sharing clean and type-safe.
 
-```ts
-import React from 'react';
-
-interface UserContextType {
-  name: string;
-  message: string;
-}
-
-// Create the context with a default value of undefined
-export const UserContext = React.createContext<UserContextType | undefined>(undefined);
+---
 
 ## How to Run
 
@@ -36,16 +30,10 @@ export const UserContext = React.createContext<UserContextType | undefined>(unde
 git clone https://github.com/cmartinezBoada/ReactTypescript-Context-Example.git
 cd react-context-example
 
-cd ReactTypescript-Context-Example
-
-### 2. Install dependencies:
-
-```bash
-
+### 2. Install dependencies
 npm install
 
-### 3. Start the development server:
+### 3. Start the development server 
+npm run dev  
 
-```bash
-
-npm run dev
+### 4. Open your browser, after 5 seconds the message will update. 
